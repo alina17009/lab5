@@ -14,6 +14,14 @@
 
 using namespace std;
 
+/*class MyClass
+{
+public:
+void operator()(int i)
+{
+cout << i << ' ';
+}
+};*/
 struct MyClass
 {
 	void operator()(int i)
@@ -33,6 +41,10 @@ template <typename T> class MyClass2
 public:
 	void operator()(list <int> main_int)
 	{
+		//cout << i << ' ';
+		//main_int_iter = main_int.begin();
+		//list <int> main_int;
+		//cout << "Сумма простых чисел: " << accumulate(main_int.begin(), main_int.end(), 0, sum<int>);
 		cout << accumulate(main_int.begin(), main_int.end(), 0, sum<int>);
 	}
 };
@@ -41,7 +53,18 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	srand((unsigned)time(NULL));
-	
+
+	/*
+	int n = 10; 
+	vector<int>Vector(n);
+	for (int i = 0; i < n; i++)
+		Vector[i] = rand() % n;
+		
+		
+	//_______________________________________________________________________lab2_11_32.cpp:	
+		
+		
+		*/
 	vector <int> Vector = { -1, 2, 3, 17, 5, 6, 7 };
 
 	Vector.at(1) = 999;
