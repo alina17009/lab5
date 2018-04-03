@@ -31,23 +31,11 @@ struct MyClass3
 	}
 };
 	
-/*template <typename T> class MyClass2
-{
-public:
-	void operator()(int i)
-	{
-		cout << i << ' ';
-		
-		//cout << accumulate(main_int.begin(), main_int.end(), 0, sum<int>);
-	}
-};*/
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	srand((unsigned)time(NULL));
-
-	
+		
 	int n = 6; 
 	vector<int>Vector(n);
 	for (int i = 0; i < n; i++)
@@ -59,15 +47,11 @@ int main()
 	cout << endl << endl << endl;
 
 	vector <int>::iterator pv;
-	//pv = find_if(Vector.begin(), Vector.end(), &pred);
 	MyClass3 obj3;
 	pv = find_if(Vector.begin(), Vector.end(), obj3);
 	if (pv == Vector.end()) cout << "Простых чисел нет" << endl << endl;
 	else cout << "Первый элемент, который является простым числом: " << *pv << endl << endl;
-	
-	
-	
-	
+		
 	_getch();
 	return 0;
 }
