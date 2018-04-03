@@ -14,13 +14,6 @@
 
 using namespace std;
 
-struct MyClass
-{
-	void operator()(int i)
-	{
-		cout << i << ' ';
-	}
-};
 struct MyClass3
 {
 	int operator()(int i)
