@@ -1,6 +1,6 @@
 // lab5.cpp: определяет точку входа для консольного приложения.
 //
-/* http://ci-plus-plus-snachala.ru/?p=323 */
+
 
 
 #include "stdafx.h"
