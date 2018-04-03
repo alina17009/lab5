@@ -1,4 +1,4 @@
-// lab5.cpp: определяет точку входа для консольного приложения.
+// lab5.cpp: 
 //
 
 #include "stdafx.h"
@@ -8,8 +8,8 @@
 #include <conio.h>
 
 #include <time.h>
-#include <algorithm> //для find_if
-#include <numeric> //для accumulate
+#include <algorithm> //find_if
+#include <numeric> //accumulate
 #include <vector>
 
 using namespace std;
@@ -24,7 +24,7 @@ struct MyClass3
 	
 int main()
 {
-	setlocale(LC_ALL, "Russian");
+	//setlocale(LC_ALL, "Russian");
 	srand((unsigned)time(NULL));
 
 	int n = 6; 
@@ -39,11 +39,11 @@ int main()
 	vector <int>::iterator pv;
 	MyClass3 obj3;
 	pv = find_if(Vector.begin(), Vector.end(), obj3);
-	if (pv == Vector.end()) cout << "Простых чисел нет" << endl << endl;
-	else cout << "Первый элемент, который является простым числом: " << *pv << endl << endl;
+	if (pv == Vector.end()) cout << "No prime numbers" << endl << endl;
+	else cout << "First element: " << *pv << endl << endl;
 	
 	_getch();
 	return 0;
 }
-//[&, n] (int a) mutable { m = ++n + a; }(4); //mutable позволяет изменять n внутри лямбда-выражения
+//[&, n] (int a) mutable { m = ++n + a; }(4); //mutable 
 //int n = [] (int x, int y) { return x + y; }(5, 4);
