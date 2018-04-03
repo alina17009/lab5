@@ -32,7 +32,7 @@ int main()
 	for (int i = 0; i < n; i++)
 		Vector[i] = rand() % 10;
 
-	cout << "Исходный вектор:" << endl;
+	cout << "Vector:" << endl;
 	for_each(Vector.begin(), Vector.end(), [](int i){ cout << i << ' '; });
 	cout << endl;
 
