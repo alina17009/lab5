@@ -1,8 +1,6 @@
 // lab5.cpp: определяет точку входа для консольного приложения.
 //
 
-
-
 #include "stdafx.h"
 #include <iostream>
 #include <list>
@@ -16,32 +14,6 @@
 
 using namespace std;
 
-/*struct MyClass
-{
-	void operator()(int i)
-	{
-		cout << i << ' ';
-	}
-};*/
-/*struct MyClass3
-{
-	int operator()(int i)
-	{
-		return (i == 2) || (i == 3) || (i == 5) || (i == 7);
-	}
-};*/
-	
-/*template <typename T> class MyClass2
-{
-public:
-	void operator()(int i)
-	{
-		cout << i << ' ';
-		
-		//cout << accumulate(main_int.begin(), main_int.end(), 0, sum<int>);
-	}
-};*/
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -51,15 +23,12 @@ int main()
 	vector<int>Vector(n);
 	for (int i = 0; i < n; i++)
 		Vector[i] = rand() % 10;
-	for_each(Vector.begin(), Vector.end(), [](int i){ cout << i << ' '; });
-	
-	//MyClass obj;
+		
 	cout << "Исходный вектор:" << endl;
 	for_each(Vector.begin(), Vector.end(), [](int i){ cout << i << ' '; });
 	cout << endl;
 
 	vector <int>::iterator pv;
-	//MyClass3 obj3;
 	pv = find_if(Vector.begin(), Vector.end(), [](int i){ return (i == 2) || (i == 3) || (i == 5) || (i == 7); });
 	if (pv == Vector.end()) cout << "Простых чисел нет" << endl << endl;
 	else cout << "Первый элемент, который является простым числом: " << *pv << endl << endl;
